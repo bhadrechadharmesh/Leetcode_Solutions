@@ -16,6 +16,9 @@ class Solution {
 
 public:
     bool stoneGame(vector<int>& piles) {
-        return true;
+        int n = piles.size();
+        dp.assign(n, vector<int>(n,-1));
+
+        return helper(piles,0,n-1) > 0;
     }
 };
