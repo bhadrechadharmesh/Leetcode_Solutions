@@ -37,7 +37,8 @@ public:
 
         bool isValid = false;
         for(int i=0;i<n;i++){
-            if(vis[i]==0){
+            if(isValid)break;
+            if(vis[i]==0 && !isValid){
                 dfs(graph,i,vis,isValid);
             }
         }
